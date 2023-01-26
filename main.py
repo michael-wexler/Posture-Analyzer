@@ -3,7 +3,7 @@ import time
 import math
 import mediapipe as mp
 
-#function to calculate angle between two vectors <x2 - x1, y2 - y1> and <x2 - x1, -y1>
+#function to calculate angle between two vectors <x2 - x1, y2 - y1> and <x3 - x1, -y1>
 def calculate_angle(x1, y1, x2, y2):
     theta = math.acos((y2 - y1) * (-y1) / (math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2) * y1))
     angle = math.degrees(theta)
@@ -12,7 +12,7 @@ def calculate_angle(x1, y1, x2, y2):
 def alert():
     pass
 
-font = cv2.FONT_HERSHEY_SIMPLEX
+font = cv2.FONT_HERSHEY_DUPLEX
 red = (50, 50, 255)
 green = (127, 255, 0)
 dark_blue = (127, 20, 0)
